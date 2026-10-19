@@ -1,34 +1,77 @@
-# Gradle files
+# Gradle
 .gradle/
-build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
-# Local configuration file (sdk path, etc)
+# Local configuration
 local.properties
+keystore.properties
+*.env
+.env.*
 
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
+# Android / generated files
 captures/
 .externalNativeBuild/
 .cxx/
-*.aab
 *.apk
+*.aab
+*.apks
+*.aar
 output-metadata.json
+intermediates/
+generated/
+outputs/
 
-# IntelliJ
-*.iml
+# IDE / JetBrains / VS Code
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+*.iml
+*.ipr
+*.iws
+*.code-workspace
+.vscode/
 
-# Keystore files
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Keystore / signing / certificates
 *.jks
 *.keystore
+*.p12
+*.pem
 
-# Google Services (e.g. APIs or Firebase)
+# Google services / Firebase
+# Ignore local copies of Google services config by default; remove if intentionally committed.
 google-services.json
+**/google-services.json
+google-services.*.json
+**/google-services.*.json
 
-# Android Profiling
-*.hprof
+# Kotlin / Java / build artifacts
+*.class
+*.dex
+.kotlin/
+kotlinc/
+kotlin-js-store/
+
+# Native / NDK
+obj/
+jniLibs/
+externalNativeBuild/
+nativeDebug/
+nativeRelease/
+
+# Misc/other common ignores
+coverage/
+test-results/
+.docs/
+.cache/
+*/.gradle/
